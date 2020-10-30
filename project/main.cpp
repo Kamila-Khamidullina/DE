@@ -66,7 +66,9 @@ public:
     void exact(){
         for (int i = 1; i < N + 1; i++){
             double x = pointsX.value(i);
-            pointsYexact.append(pow((x - 1), 3));
+            double power = 0.333333;
+            double C = 3 * pow(y0, power) - 3 * x0;
+            pointsYexact.append(pow(((3 * x + C) / 3), 3));
         }
     }
 
